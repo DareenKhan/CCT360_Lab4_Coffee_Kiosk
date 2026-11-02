@@ -1,0 +1,38 @@
+:root { font-family: Arial, sans-serif; color: #34261e; background: #f5f0e9; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 36px 16px; }
+.kiosk { max-width: 860px; margin: auto; padding: 42px; background: #fffdf9; border: 1px solid #eadfd1; border-radius: 24px; box-shadow: 0 16px 48px #4e372015; }
+header { text-align: center; padding-bottom: 22px; }
+.brand { font-size: 21px; font-weight: 800; letter-spacing: 3px; }
+.brand span { color: #b47c4f; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #a17b60; }
+h1 { font-family: Georgia, serif; font-size: clamp(30px, 5vw, 46px); margin: 22px 0 10px; }
+.intro { color: #857769; line-height: 1.5; }
+section { margin-top: 34px; }
+section h2 { font-size: 20px; margin-bottom: 17px; }
+.number { color: #b17c55; font-size: 14px; padding-right: 10px; }
+.drink-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.drink-card { cursor: pointer; font: inherit; border: 2px solid #eee4d8; background: #fff; border-radius: 14px; padding: 20px 8px; display: flex; flex-direction: column; align-items: center; gap: 9px; color: inherit; }
+.drink-card.selected { border-color: #815b3f; background: #f9f1e7; }
+.drink-card:hover, .segmented button:hover { border-color: #a47a5b; }
+.drink-icon { font-size: 35px; margin: 4px 0; }
+.drink-card strong { font-size: 15px; }
+.drink-card small { color: #8f8277; font-size: 12px; }
+.drink-card > span:last-child { font-weight: 700; margin-top: 8px; }
+.segmented { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.segmented button { cursor: pointer; font: inherit; background: white; color: inherit; border: 2px solid #eee4d8; border-radius: 12px; padding: 15px 8px; font-weight: 700; }
+.segmented button.active { background: #f9f1e7; border-color: #815b3f; }
+.segmented small { display: block; font-size: 11px; color: #8c7b6c; font-weight: 400; margin-top: 6px; }
+label { display: block; margin-bottom: 10px; color: #74695e; font-size: 14px; }
+select { width: 100%; padding: 15px; border: 1px solid #d9c9b9; border-radius: 10px; font: inherit; background: #fff; color: inherit; }
+.summary { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 20px 24px; border-radius: 14px; background: #f5ecdf; }
+.summary h2 { margin: 5px 0; }
+.summary p:last-child { color: #78695b; margin: 8px 0 0; }
+.price { text-align: right; flex-shrink: 0; }
+.price small { display: block; color: #78695b; }
+.price strong { display: block; font-size: 29px; margin-top: 4px; }
+.order-button { cursor: pointer; width: 100%; margin-top: 16px; background: #513829; color: white; border: 0; border-radius: 12px; padding: 18px; font: inherit; font-size: 17px; font-weight: 700; display: flex; justify-content: center; gap: 18px; }
+.order-button:hover { background: #775238; }
+.confirmation { margin-top: 16px; border-radius: 12px; padding: 18px; color: #31513c; background: #e6f2e9; line-height: 1.5; }
+footer { text-align: center; margin-top: 30px; font-size: 12px; color: #a69789; }
+@media (max-width: 650px) { .kiosk { padding: 22px; } .drink-grid { grid-template-columns: repeat(2, 1fr); } .summary { padding: 16px; } .price strong { font-size: 24px; } }

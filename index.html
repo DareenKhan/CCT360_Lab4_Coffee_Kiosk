@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean & Brew | Coffee Kiosk</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="kiosk">
+    <header>
+      <div class="brand">☕ BEAN <span>&</span> BREW</div>
+      <p class="eyebrow">SELF-SERVICE COFFEE BAR</p>
+      <h1>Pick your drink, make it yours, and we'll take care of the rest.</h1>
+    </header>
+
+    <section aria-labelledby="drink-heading">
+      <h2 id="drink-heading"><span class="number">01</span> Choose your coffee</h2>
+      <div class="drink-grid" id="drinks">
+        <button class="drink-card selected" type="button" data-drink="Latte" aria-pressed="true"><span class="drink-icon">☕</span><strong>Latte</strong><small>Smooth & creamy</small><span>$4.50</span></button>
+        <button class="drink-card" type="button" data-drink="Cappuccino" aria-pressed="false"><span class="drink-icon">♨️</span><strong>Cappuccino</strong><small>Bold & foamy</small><span>$4.00</span></button>
+        <button class="drink-card" type="button" data-drink="Espresso" aria-pressed="false"><span class="drink-icon">🫘</span><strong>Espresso</strong><small>Rich & strong</small><span>$3.00</span></button>
+        <button class="drink-card" type="button" data-drink="Iced Coffee" aria-pressed="false"><span class="drink-icon">🧊</span><strong>Iced Coffee</strong><small>Cool & refreshing</small><span>$4.25</span></button>
+      </div>
+    </section>
+
+    <section aria-labelledby="size-heading">
+      <h2 id="size-heading"><span class="number">02</span> Pick a size</h2>
+      <div class="segmented" id="sizes">
+        <button type="button" data-size="Small" aria-pressed="false">Small <small>−$0.50</small></button>
+        <button type="button" class="active" data-size="Medium" aria-pressed="true">Medium <small>Standard</small></button>
+        <button type="button" data-size="Large" aria-pressed="false">Large <small>+$0.75</small></button>
+      </div>
+    </section>
+
+    <section aria-labelledby="milk-heading">
+      <h2 id="milk-heading"><span class="number">03</span> Make it yours</h2>
+      <label for="milk">Milk preference</label>
+      <select id="milk">
+        <option value="Regular milk">Regular milk (included)</option>
+        <option value="Oat milk">Oat milk (+$0.75)</option>
+        <option value="Almond milk">Almond milk (+$0.75)</option>
+      </select>
+    </section>
+
+    <section class="summary" aria-labelledby="summary-heading">
+      <div><p class="eyebrow">YOUR ORDER</p><h2 id="summary-heading">Order summary</h2><p id="order-description" aria-live="polite">Medium Latte · Regular milk</p></div>
+      <div class="price"><small>Total (CAD)</small><strong id="total">$4.50</strong></div>
+    </section>
+    <button id="place-order" class="order-button" type="button">Place Order <span>→</span></button>
+    <div id="confirmation" class="confirmation" role="status" hidden></div>
+    
+  </main>
+</body>
+</html>
